@@ -19,6 +19,7 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtu0LJRmM5L5zQuT5MZpzza7oDTJwSnA0&sensor=false"></script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -50,40 +51,80 @@
         </section>
 
         <section class="trade-shows">
-            <h2 class="section-header">Trade Shows</h2>
+            <header class="section-header">
+                <h2 class="section-header-text contained">Trade Shows</h2>
+            </header>
+            <div class="contained">
+                <ul class="shows-list">
+                    <li class="show"><strong>BCRS BC Rep Show</strong> <br><span class="dash">&mdash;</span> January 11<sup>th</sup> - 13<sup>th</sup></li>
+                    <li class="show"><strong>Know Show Vanocouver</strong> <br><span class="dash">&mdash;</span> January 15<sup>th</sup> - 17<sup>th</sup></li>
+                    <li class="show"><strong>SIA Ski Show Denver</strong> <br><span class="dash">&mdash;</span> January 30<sup>th</sup> - February 2<sup>nd</sup></li>
+                    <li class="show"><strong>ASRA Alberta Rep Show</strong> <br><span class="dash">&mdash;</span> February 4<sup>th</sup> - 6<sup>th</sup></li>
+                    <li class="show"><strong>Midwest Saskatoon</strong> <br><span class="dash">&mdash;</span> February 22<sup>nd</sup> - 24<sup>th</sup></li>
+                    <li class="show"><strong>Trends Show Edmonton</strong> <br><span class="dash">&mdash;</span> March 6<sup>th</sup> - 10<sup>th</sup></li>
+                </ul>
+            </div>
         </section>
 
         <section class="showrooms">
-            <h2 class="section-header">Showrooms</h2>
-            <div class="calgary-showroom"><!-- map goes here --></div>
-            <div class="vancouver-showroom"><!-- map goes here --></div>
+            <header class="section-header">
+                <h2 class="section-header-text contained">Showrooms</h2>
+            </header>
+
+            <div id="calgary-map-canvas"></div>
+            <div class="showroom calgary-showroom">
+                <div class="contained">
+                    <h3 class="showroom-header">Calgary Showroom</h3>
+                    <address>
+                        2834 Morley Trail NW<br><span class="comma">,</span> Calgary, AB T2M 4G7
+                    </address>
+                </div>
+            </div>
+
+            <div id="vancouver-map-canvas"></div>
+            <div class="showroom vancouver-showroom">
+                <div class="contained">
+                    <h3 class="showroom-header">Vancouver Showroom</h3>
+                    <address>
+                        The GX - Suite 229<br><span class="comma">,</span> 
+                        1868 Glen Drive<br><span class="comma">,</span> 
+                        Vancouver, BC V6A 4K4
+                    </address>
+                </div>
+            </div>
         </section>
 
         <section class="contacts">
-            <h2 class="section-header">Contacts</h2>
-            <ul>
-                <li>
+            <header class="section-header">
+                <h2 class="section-header-text contained">Contacts</h2>
+            </header>
+            <ul class="contact-list contained">
+                <li class="contact">
                     <h3 class="contact-header">Shannon Tomasek</h3>
-                    <p class="email"><a href="mailto:shannon@tomasekagencies.com">shannon@tomasekagencies.com</a></p>
-                    <p class="phone">403.560.7432</p>
+                    <p class="email"><i class="fa fa-envelope"></i><a href="mailto:shannon@tomasekagencies.com">shannon@tomasekagencies.com</a></p>
+                    <p class="phone"><i class="fa fa-phone"></i> 403.560.7432</p>
                 </li>
-                <li>
+                <li class="contact">
                     <h3 class="contact-header">Eric Tomasek</h3>
-                    <p class="email"><a href="mailto:eric@tomasekagencies.com">eric@tomasekagencies.com</a></p>
-                    <p class="phone">403.614.6853</p>
+                    <p class="email"><i class="fa fa-envelope"></i><a href="mailto:eric@tomasekagencies.com">eric@tomasekagencies.com</a></p>
+                    <p class="phone"><i class="fa fa-phone"></i> 403.614.6853</p>
                 </li>
-                <li>
+                <li class="contact">
                     <h3 class="contact-header">Kate Johnson</h3>
-                    <p class="email"><a href="mailto:kate@tomasekagencies.com">kate@tomasekagencies.com</a></p>
-                    <p class="phone">604.562.5598</p>
+                    <p class="email"><i class="fa fa-envelope"></i><a href="mailto:kate@tomasekagencies.com">kate@tomasekagencies.com</a></p>
+                    <p class="phone"><i class="fa fa-phone"></i> 604.562.5598</p>
                 </li>
-                <li>
+                <li class="contact">
                     <h3 class="contact-header">Jenna Larson</h3>
-                    <p class="email"><a href="mailto:jlarson@spyder.com">jlarson@spyder.com</a></p>
-                    <p class="phone">403.289.4428</p>
+                    <p class="email"><i class="fa fa-envelope"></i><a href="mailto:jlarson@spyder.com">jlarson@spyder.com</a></p>
+                    <p class="phone"><i class="fa fa-phone"></i> 403.289.4428</p>
                 </li>
             </ul>
         </section>
+
+        <footer class="page-footer">
+            <p>&copy; 2013 Tomasek Agencies <span class="dash">&mdash;</span><br> Site by <a href="http://rileytomasek.com">Riley Tomasek</a></p>
+        </footer>
 
 
         <!-- build:js scripts/vendor.js -->
