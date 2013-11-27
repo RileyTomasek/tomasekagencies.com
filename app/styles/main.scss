@@ -176,14 +176,27 @@ ul {
         line-height: 1.6;
     }
     @include bp( tablet ) {
-        margin-top: 82px;
-        p { font-size: 21px; }
+        background-image: url('../images/sky.jpg');
+        background-position: center bottom;
+        background-size: cover;
+        height: 550px;
+        position: relative;
+        p {
+            font-size: 21px;
+            background: rgba(255, 255, 255, 0.7);
+            width: 60%;
+            position: absolute;
+            left: 7.5%;
+            bottom: 50%;
+            margin-bottom: -95px;
+        }
     }
     @include bp( desktop ) {
-        margin-top: 90px;
+        height: 700px;
         p {
-            padding: 40px;
+            width: 45%;
             font-size: 23px;
+            margin-bottom: -115px;
         }
     }
 }
