@@ -18,6 +18,9 @@
     @else if $point == huge {
         @media (min-width: 1400px) { @content; }
     }
+    @else if $point == tablet-only {
+        @media (min-width: 768px) and (max-width: 1024px) { @content; }
+    }
 }
 
 $border: #ccc;
@@ -206,10 +209,33 @@ ul {
 }
 
 .brands {
+    @extend %clearfix;
     .brand {
         background: $foreground-color;
         padding: 15px;
         margin-bottom: 10px;
+        @include bp( tablet ) {
+            width: 49.5%;
+            float: left;
+            margin-bottom: 1%;
+            @include box-sizing(border-box);
+        }
+        @include bp( tablet-only ) {
+            &:nth-child( 2n ) {
+                margin-left: 1%;
+            }
+        }
+        @include bp( desktop ) {
+            width: 32.66%;
+            float: left;
+            margin-bottom: 1%;
+            margin-right: 1%;
+            margin-left: 0;
+            @include box-sizing(border-box);
+            &:nth-child( 3n ) {
+                margin-right: 0;
+            }
+        }
     }
     .btn {
         display: block;
@@ -228,38 +254,34 @@ ul {
     .logo {
         background-size: cover;
         width: 100%;
+        padding-bottom: 50%;
     }
     .spyder-logo {
         background-image: url('../images/spyder-logo-mobile.png');
-        padding-bottom: 54.7%;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             background-image: url('../images/spyder-logo-mobile-retina.png');
         }
     }
     .oneill-logo {
         background-image: url('../images/oneill-logo-mobile.png');
-        padding-bottom: 50%;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             background-image: url('../images/oneill-logo-mobile-retina.png');
         }
     }
     .skechers-logo {
         background-image: url('../images/skechers-logo-mobile.png');
-        padding-bottom: 39.4%;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             background-image: url('../images/skechers-logo-mobile-retina.png');
         }
     }
     .bula-logo {
         background-image: url('../images/bula-logo-mobile.png');
-        padding-bottom: 50%;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             background-image: url('../images/bula-logo-mobile-retina.png');
         }
     }
     .wigwam-logo {
         background-image: url('../images/wigwam-logo-mobile.png');
-        padding-bottom: 51%;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             background-image: url('../images/wigwam-logo-mobile-retina.png');
         }
