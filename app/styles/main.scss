@@ -201,6 +201,67 @@ ul {
     }
 }
 
+.brands {
+    .brand {
+        background: $foreground-color;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .btn {
+        display: block;
+        width: 55%;
+        text-align: center;
+        border: 2px solid $light-blue;
+        border-radius: 4px;
+        padding: 5px 0;
+        margin: 15px auto 5px;
+        i { padding-left: 4px; }
+        &:hover {
+            text-decoration: none;
+            background: rgba(65, 131, 196, 0.15);
+        }
+    }
+    .logo {
+        background-size: cover;
+        width: 100%;
+    }
+    .spyder-logo {
+        background-image: url('../images/spyder-logo-mobile.png');
+        padding-bottom: 54.7%;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../images/spyder-logo-mobile-retina.png');
+        }
+    }
+    .oneill-logo {
+        background-image: url('../images/oneill-logo-mobile.png');
+        padding-bottom: 50%;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../images/oneill-logo-mobile-retina.png');
+        }
+    }
+    .skechers-logo {
+        background-image: url('../images/skechers-logo-mobile.png');
+        padding-bottom: 39.4%;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../images/skechers-logo-mobile-retina.png');
+        }
+    }
+    .bula-logo {
+        background-image: url('../images/bula-logo-mobile.png');
+        padding-bottom: 50%;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../images/bula-logo-mobile-retina.png');
+        }
+    }
+    .wigwam-logo {
+        background-image: url('../images/wigwam-logo-mobile.png');
+        padding-bottom: 51%;
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../images/wigwam-logo-mobile-retina.png');
+        }
+    }
+}
+
 .trade-shows {
     .dash { display: none; }
     ul { @extend %clearfix; }
