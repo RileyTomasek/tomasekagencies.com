@@ -320,27 +320,28 @@ ul {
 
 .showrooms {
     .showroom {
-        padding: $inner-left-padding;
         background: $foreground-color;
         margin-bottom: 10px;
         h3 { margin: 0; padding: 0 0 8px; }
         .comma { display: none; }
     }
-    .contained { @extend %clearfix; }
+    .showroom-info {
+        @extend %clearfix;
+        padding: 10px 15px;
+    }
+    .map-wrap {
+        width: 100%;
+        height: 200px;
+        @include bp( tablet ) {
+            height: 400px;
+        }
+    }
     @include bp( tablet ) {
         br { display: none; }
         address { float: right; line-height: 25px; }
         .showroom h3 { float: left; }
         .showroom { margin-bottom: 25px; }
         .comma { display: inline; }
-    }
-}
-
-#calgary-map-canvas, #vancouver-map-canvas {
-    width: 100%;
-    height: 200px;
-    @include bp( tablet ) {
-        height: 400px;
     }
 }
 
