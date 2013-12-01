@@ -31,7 +31,7 @@
         var vancoverMarker = new google.maps.Marker({
             position: vancouverLatLng,
             map: vancouverMap,
-            title: 'Vanouver Showroom'
+            title: 'Vancouver Showroom'
         });
     }
 
